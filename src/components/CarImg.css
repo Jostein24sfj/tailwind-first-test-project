@@ -1,0 +1,55 @@
+/* Container for the whole car image with relative positioning */
+.flex {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Basic setup for the 4 angel eyes */
+.angel-eyes {
+  position: absolute;
+  background-color: rgba(205, 203, 168, 0.699);
+  /* Light yellow for headlights */
+  border-radius: 50%;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease; /* Smooth fade-in/fade-out effect */
+  z-index: 10; /* Ensure angel eyes appear above the image */
+  width: 30px; /* Size of the angel eyes */
+  height: 30px; /* Size of the angel eyes */
+}
+
+/* Position each angel eye */
+.angel-eyes:nth-of-type(1) {
+  top: 50%; /* Adjust position for the first light */
+  left: 26%; /* Adjust left position for the first light */
+}
+
+.angel-eyes:nth-of-type(2) {
+  top: 50%; /* Adjust position for the second light */
+  left: 69.5%; /* Adjust left position for the second light */
+}
+
+.angel-eyes:nth-of-type(3) {
+  top: 50%; /* Adjust position for the third light */
+  left: 31.7%; /* Adjust left position for the third light */
+}
+
+.angel-eyes:nth-of-type(4) {
+  top: 50.2%; /* Adjust position for the fourth light */
+  left: 63.8%; /* Adjust left position for the fourth light */
+}
+
+/* The flash effect when the 'glow' state is true */
+.angel-eyes.glow {
+  opacity: 1; /* Makes the glow visible */
+  box-shadow: 0px 0px 20px rgb(246, 255, 0),
+    /* Strong white glow */ 0 0 20px rgb(255, 255, 0); /* Fading light effect */
+}
+
+/* You can remove the pulse effect to create a quick "flash" effect instead of a pulsing glow */
+
+/* Ensure the image has a lower stacking order */
+img {
+  z-index: 1; /* Image goes behind the angel eyes */
+}
