@@ -7,44 +7,9 @@ export default function App() {
   return (
     <>
       <Header />
-      <br />
-      <br />
-      <br />
       <CarInfo />
       <CarImg />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <div className="min-h-screen"></div>
     </>
   );
 }

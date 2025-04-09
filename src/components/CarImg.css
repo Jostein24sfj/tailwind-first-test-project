@@ -1,14 +1,15 @@
 /* Container for the whole car image with relative positioning */
-.flex {
+/* .flex-center {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 /* Basic setup for the 4 angel eyes */
 .angel-eyes {
   position: absolute;
+  /* background-color: aqua; */
   background-color: rgba(205, 203, 168, 0.699);
   /* Light yellow for headlights */
   border-radius: 50%;
@@ -19,30 +20,38 @@
   height: 30px; /* Size of the angel eyes */
 }
 
+@media screen and (max-width: 768px) {
+  .angel-eyes {
+    width: 22.8px; /* Size of the angel eyes */
+    height: 22.8px; /* Size of the angel eyes */
+  }
+}
+
 /* Position each angel eye */
 .angel-eyes:nth-of-type(1) {
   top: 50%; /* Adjust position for the first light */
-  left: 26%; /* Adjust left position for the first light */
+  left: 15%; /* Adjust left position for the first light */
 }
 
 .angel-eyes:nth-of-type(2) {
   top: 50%; /* Adjust position for the second light */
-  left: 69.5%; /* Adjust left position for the second light */
+  left: 79%; /* Adjust left position for the second light */
 }
 
 .angel-eyes:nth-of-type(3) {
   top: 50%; /* Adjust position for the third light */
-  left: 31.7%; /* Adjust left position for the third light */
+  left: 23.7%; /* Adjust left position for the third light */
 }
 
 .angel-eyes:nth-of-type(4) {
   top: 50.2%; /* Adjust position for the fourth light */
-  left: 63.8%; /* Adjust left position for the fourth light */
+  left: 70%; /* Adjust left position for the fourth light */
 }
 
 /* The flash effect when the 'glow' state is true */
 .angel-eyes.glow {
-  opacity: 1; /* Makes the glow visible */
+  opacity: 1;
+  /* Makes the glow visible */
   box-shadow: 0px 0px 20px rgb(246, 255, 0),
     /* Strong white glow */ 0 0 20px rgb(255, 255, 0); /* Fading light effect */
 }

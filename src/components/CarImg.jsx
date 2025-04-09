@@ -28,17 +28,19 @@ export default function CarImg() {
   }, []);
 
   return (
-    <div className="flex bg-center bg-cover bg-fixed h-screen">
-      <img
-        className="h-118 w-auto opacity-20"
-        src="/bmwE36Drawing.png"
-        alt="BMW E36"
-      />
-      {/* Render all 4 angel eyes */}
-      <div className={`angel-eyes ${glow ? "glow" : ""}`}></div>
-      <div className={`angel-eyes ${glow ? "glow" : ""}`}></div>
-      <div className={`angel-eyes ${glow ? "glow" : ""}`}></div>
-      <div className={`angel-eyes ${glow ? "glow" : ""}`}></div>
+    <div className="flex justify-center items-center min-h-screen fixed top-0 translate-x-1/2 right-1/2 -z-10">
+      <div className="relative md:h-118 md:w-118 h-90 w-90">
+        <img
+          className="h-full w-full opacity-50"
+          src="/bmwE36Drawing.png"
+          alt="BMW E36"
+        />
+        {/* Render all 4 angel eyes */}
+        <div className={`angel-eyes ${glow ? "glow" : ""}`} />
+        <div className={`angel-eyes ${glow ? "glow" : ""}`} />
+        <div className={`angel-eyes ${glow ? "glow" : ""}`} />
+        <div className={`angel-eyes ${glow ? "glow" : ""}`} />
+      </div>
     </div>
   );
 }
