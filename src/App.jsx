@@ -7,9 +7,12 @@ export default function App() {
   return (
     <>
       <Header />
-      <CarInfo />
-      <CarImg />
-      <div className="min-h-screen"></div>
+      <main>
+        <div className="min-h-[70vh]"></div>
+        <CarInfo />
+        <CarImg />
+        <div className="min-h-[70vh]"></div>
+      </main>
     </>
   );
 }
