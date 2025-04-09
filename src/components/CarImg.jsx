@@ -1,29 +1,22 @@
-import { useEffect, useState, useRef } from "react";
-import "./CarImg.css"; // Make sure this CSS file is linked
+import { useEffect, useState } from "react";
+import "./CarImg.css"; // Ensure this CSS file is linked
 
 export default function CarImg() {
   const [glow, setGlow] = useState(false);
-  const scrollTimeout = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setGlow(true);
+      // Get the current scroll position
+      const scrollY = window.scrollY;
 
-      // Clear previous timeout to reset the timer
-      if (scrollTimeout.current) {
-        clearTimeout(scrollTimeout.current);
-      }
-
-      // Set a new timeout to remove glow 2 seconds after scrolling stops
-      scrollTimeout.current = setTimeout(() => {
-        setGlow(false);
-      }, 300); // Flash effect duration (make it faster for a brief flash)
+      // If scrolled down, turn the lights on. If at the top, turn them off
+      setGlow(scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      clearTimeout(scrollTimeout.current); // Clear the timeout on cleanup
     };
   }, []);
 
