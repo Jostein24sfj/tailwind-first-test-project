@@ -1,10 +1,10 @@
 export default function CarInfo() {
   return (
     <>
-      <h1 className="flex justify-center pb-6 text-purple-300 text-3xl font-medium md:mt-110 mt-128">
-        The Legend of the E36
-      </h1>
       <div className="bg-purple-900/50">
+        <h1 className="flex justify-center pb-6 text-purple-300 text-3xl font-medium md:mt-110 mt-128">
+          The Legend of the E36
+        </h1>
         <div className="flex flex-wrap gap-12 rounded-md justify-center">
           <div className="">
             <h2 className="text-cyan-400 text-2xl pb-12 font-extralight pl-12">
