@@ -1,16 +1,16 @@
 export default function CarInfo() {
   return (
     <>
-      <h1 className="flex justify-center pb-6 text-purple-300 text-3xl font-medium mt-100">
+      <h1 className="flex justify-center pb-6 text-purple-300 text-3xl font-medium md:mt-110 mt-128">
         The Legend of the E36
       </h1>
       <div className="bg-purple-900/50">
         <div className="flex flex-wrap gap-12 rounded-md justify-center">
           <div className="">
-            <h2 className="text-cyan-400 text-2xl pb-12 font-extralight">
+            <h2 className="text-cyan-400 text-2xl pb-12 font-extralight pl-12">
               Here's a short story about the legendary BMW E36.
             </h2>
-            <div className="text-start">
+            <div className="text-start md:pl-12 md:pr-12 pl-4 pr-4">
               <p className="pb-6 text-blue-200">
                 In the golden era of the 1990s, a machine rolled off the
                 assembly lines of Munich that would go on to define a generation
